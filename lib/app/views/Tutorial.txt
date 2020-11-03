@@ -1,0 +1,43 @@
+child: Row >> Cria uma matriz horizontal de filhos.
+
+
+children: >> Cria uma matriz vertical de filhos, (Padding, Text).
+            padding e text so podem ser criados dentro de uma children
+
+
+
+
+
+
+// exemplo de texto com padding(espaçamento) com texto
+Padding(
+    child: Text('Hello World!'),
+    padding: EdgeInsets.all(50.0),
+),
+
+//exemplo padding com caixa de texto
+// cada elemento so pode ter uma child(filho)
+Padding(
+          padding: EdgeInsets.all(50.0),
+          child: TextField(
+            decoration: InputDecoration(),
+          ),
+
+
+
+          
+\\Cria um widget que expande um filho de uma [Linha], [Coluna] ou [Flex] para que o filho preencha o espaço disponível ao longo do eixo principal do widget flexível.
+\\ não dava para criar um filho Text Field em (child: Row) ao menos que use Expanded, parece que espade ajeita  
+Expanded(
+                child: TextField(
+                  decoration: InputDecoration(),
+                ),
+              ),
+            ]))
+
+
+\\ um child em coluna e dentro em o children, que pode outros (Text,TextField,SizedBox)
+child: Column(children: [])
+
+\\ alinhar no certro usei dentro de uma (child: Column)
+ mainAxisAlignment: MainAxisAlignment.center,
