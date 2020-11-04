@@ -33,7 +33,7 @@ Expanded(
                   decoration: InputDecoration(),
                 ),
               ),
-            ]))
+ 
 
 
 \\ um child em coluna e dentro em o children, que pode outros (Text,TextField,SizedBox)
@@ -41,3 +41,22 @@ child: Column(children: [])
 
 \\ alinhar no certro usei dentro de uma (child: Column)
  mainAxisAlignment: MainAxisAlignment.center,
+
+ \\ dar espaçamento  (consta dar uma constante de sizez box) mas é melhor colocar height dentro de um height box mesmo
+ const SizedBox(height: 30),  
+
+               SizedBox(
+                width: 200.0,
+                height: 100.0,
+
+
+You are building a fat APK that includes binaries for android-arm, android-arm64, android-x64.
+If you are deploying the app to the Play Store, it's recommended to use app bundles or split the APK to reduce the APK size.
+    To generate an app bundle, run:
+        flutter build appbundle --target-platform android-arm,android-arm64,android-x64
+        Learn more on: https://developer.android.com/guide/app-bundle
+    To split the APKs per ABI, run:
+        flutter build apk --target-platform android-arm,android-arm64,android-x64 --split-per-abi
+        Learn more on:  https://developer.android.com/studio/build/configure-apk-splits#configure-abi-split
+        
+       comando Buildar app so para arm(normalmente ele criar pacote amr,amr64,x64) >>    flutter build apk --target-platform android-arm
